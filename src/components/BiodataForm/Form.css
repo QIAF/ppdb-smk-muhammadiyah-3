@@ -21,6 +21,7 @@
     width: 100%;
     max-width: 100%;
     overflow-x: auto;
+
     margin: 0 auto;
     padding: 20px;
 }
@@ -28,7 +29,6 @@
 .table {
     width: auto;
     max-width: 100%;
-  
     /* Memusatkan tabel di dalam kontainer */
     padding-left: 40px;
     /* Menambahkan jarak kiri */

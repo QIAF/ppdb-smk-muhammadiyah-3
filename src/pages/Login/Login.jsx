@@ -2,13 +2,13 @@ import { Input } from "../../components/Ui/Form/Input";
 import { useEffect, useState } from "react";
 import ImgGoogle from "../../../src/assets/images/img-icon-google.png";
 import { ErrMsg } from "../../components/Error/ErrMsg";
-import { loginData, validateLogin } from "../../Utils/validation";
 import { toast } from "react-toastify";
 import { useNavigate, useParams } from "react-router";
 import axios from "axios";
 import Register from "./Register";
 import Cookies from "js-cookie";
 import { Button } from "../../components/Ui/Button/Button";
+import { loginData, validateLogin } from "../../Utils/validation";
 
 export const Login = ({ title, props }) => {
   const { id } = useParams();
