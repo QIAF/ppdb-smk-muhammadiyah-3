@@ -202,16 +202,8 @@ export const Login = ({ title, props }) => {
                     className="btn btn-primary"
                     type="button"
                     onClick={handleRegisterModal}
-                    error={error}
                   >
-                    {loading ? (
-                      <div className="d-flex align-items-center">
-                        <Spinner /> {/* Komponen Spinner */}
-                        <span className="ms-2 text-center">Loading...</span>
-                      </div>
-                    ) : (
-                      "Register"
-                    )}
+                    Register
                   </button>
                 </div>
               </div>

@@ -8,12 +8,14 @@ import { useNavigate } from "react-router";
 import { useState } from "react";
 import { ErrMsg } from "../../components/Error/ErrMsg";
 import axios from "axios";
+import Spinner from "../../components/Spinner/Spinner";
 
 function Register() {
   const [error, setError] = useState({});
   const [modalRegisterOpen, setModalRegister] = useState(true);
   const [modalLoginOpen, setModalLoginOpen] = useState(false);
   const navigate = useNavigate();
+  const [loading, setLoading] = useState();
 
   const handleRegisterModal = () => {
     setModalRegister(true);
@@ -39,6 +41,7 @@ function Register() {
   };
 
   const handlePostForm = async () => {
+    setLoading(true);
     const isValid = validateRegister(form, setError);
     if (!isValid) {
       // Jika tidak valid, tampilkan pesan kesalahan dan berhenti
@@ -62,6 +65,7 @@ function Register() {
         toast.error("Terjadi kesalahan saat login", { delay: 800 });
       }
     } catch (error) {
+      setLoading(false);
       toast.error(
         "Harap masukkan data dengan benar, kemudian coba registrasi ulang.",
         {
@@ -157,7 +161,14 @@ function Register() {
                     onClick={handlePostForm}
                     // error={error}
                   >
-                    Register
+                    {loading ? (
+                      <div className="d-flex align-items-center">
+                        <Spinner /> {/* Komponen Spinner */}
+                        <span className="ms-2 text-center">Loading...</span>
+                      </div>
+                    ) : (
+                      "Register"
+                    )}
                   </button>
                 </div>
               </div>
