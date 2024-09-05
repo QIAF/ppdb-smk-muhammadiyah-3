@@ -1,4 +1,4 @@
-import ImgSiswa from "../assets/images/img-siswa.png";
+import ImgSiswa from "../assets/images/rafiki.png";
 import { useNavigate } from "react-router-dom";
 import Modal from "./Ui/Modal/Modal";
 import { useState } from "react";
