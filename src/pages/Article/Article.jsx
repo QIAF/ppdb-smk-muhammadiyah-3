@@ -57,7 +57,6 @@ export default function Article(props) {
               color: #00796b;
               margin-top: 20px;
             }
-              
           `}
         </style>
 
@@ -89,9 +88,9 @@ export default function Article(props) {
           </div>
         </div>
         <div>
-          <div className="gap-5 d-md-flex justify-content-md-end mt-5">
+          <div className="d-flex justify-content-center mt-5">
             <Button
-              className="btn btn-primary me-md-5 mb-5"
+              className="btn btn-primary mb-5"
               type="button"
               onClick={() => handleClick("/dataSiswa")}
             >

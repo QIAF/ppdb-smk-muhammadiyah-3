@@ -196,19 +196,6 @@ export const Login = ({ title, props }) => {
                   </button>
                 </div>
               </div>
-              <p className="title-or text-center" style={{ color: "#000000" }}>
-                atau
-              </p>
-              <div className="d-flex justify-content-center mx-auto mb-3">
-                <button type="button" className="btn btn-outline-dark btn-sm">
-                  <img
-                    className="img-google"
-                    src={ImgGoogle}
-                    alt="Google Icon"
-                  />
-                  &nbsp; Masuk dengan google
-                </button>
-              </div>
             </div>
           </div>
         </div>
