@@ -89,7 +89,7 @@ export default function Article(props) {
           </div>
         </div>
         <div>
-          <div className="d-grid gap-5 d-md-flex justify-content-md-end mt-5">
+          <div className="gap-5 d-md-flex justify-content-md-end mt-5">
             <Button
               className="btn btn-primary me-md-5 mb-5"
               type="button"

@@ -150,7 +150,7 @@ function Register() {
                 </div>
               </div>
               <div className="modal-footer">
-                <div className="d-grid gap-2 col-6 mx-auto">
+                <div className="=gap-2 col-6 mx-auto">
                   <button
                     className="btn btn-primary"
                     type="button"

@@ -274,7 +274,7 @@ function Form() {
         <div className="box ">
           <div className="container">
             <div className="body">{PageDisplay()}</div>
-            <div className="footer d-grid gap-3 d-md-flex justify-content-md-end mb-3">
+            <div className="footer  gap-3 d-md-flex justify-content-md-end mb-3">
               <button
                 className="btn btn-primary me-md-2"
                 type="button"

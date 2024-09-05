@@ -15,9 +15,9 @@ function Testimonial() {
       </div>
       <Marquee
         autoFill
-        className="container mx-auto d-flex items-center justify-between gap-96"
+        className="container mx-auto d-flex items-center justify-between "
       >
-        <div className="row justify-content-center gap-2">
+        <div className="row justify-content-center">
           <div className="card mb-3" style={{ maxWidth: 540 }}>
             <div className="row g-0">
               <div className="col-md-4">

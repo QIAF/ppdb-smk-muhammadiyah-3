@@ -11,7 +11,7 @@ function Box({ title, children }) {
           </h4>
         </div>
         {children}
-        <div className="footer d-grid gap-2 d-md-flex justify-content-md-end"></div>
+        <div className="footer d- gap-2 d-md-flex justify-content-md-end"></div>
       </div>
     </div>
   );

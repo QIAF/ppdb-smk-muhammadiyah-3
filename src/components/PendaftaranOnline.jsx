@@ -17,14 +17,16 @@ function PendaftaranOnline() {
               secara online dimanapun kamu berada.
             </p>
             <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-              <button type="button"
-              className="btn-daftar btn-lg px-4 me-md-2"
-              onClick={() => setmodalLogin(true)}>
+              <button
+                type="button"
+                className="btn-daftar btn-lg px-4 me-md-2"
+                onClick={() => setmodalLogin(true)}
+              >
                 Daftar sekarang
               </button>
               {modalLogin && (
-                  <Login title={"Sebelum lanjut, login dulu yuk !"} />
-                )}
+                <Login title={"Sebelum lanjut, login dulu yuk !"} />
+              )}
             </div>
           </div>
           <div className="col">
