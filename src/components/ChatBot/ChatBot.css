@@ -3,14 +3,15 @@
     position: fixed;
     bottom: 1rem;
     right: 1rem;
-    width: 100%;
-    max-width: 31.25rem;
+    width: 100%; /* Full width on small screens */
+    max-width: 25rem; /* Maximum width on larger screens */
     height: calc(100vh - 15%);
     overflow: hidden;
     z-index: 40;
     border-radius: 0.625rem;
     box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.10);
-    box-sizing: border-box;
+    /* Ensure it fits well on various screen sizes */
+    box-sizing: border-box; /* Include padding in width and height */
 }
 
 /* Chatbot header styling */
