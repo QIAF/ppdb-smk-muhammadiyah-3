@@ -19,11 +19,13 @@ import Box from "../Ui/Box/Box";
 import FooterWhite from "../Footer/FooterWhite";
 import Step from "../Step/Step";
 import Cookies from "js-cookie";
+import Spinner from "../Spinner/Spinner";
 
 function Form() {
   const [error, setError] = useState({});
   const [page, setPage] = useState(0);
   const navigate = useNavigate();
+  const [loading, setLoading] = useState();
 
   const [isLoggedIn, setIsLoggedIn] = useState(() => {
     const token = Cookies.get("token");
@@ -126,12 +128,6 @@ function Form() {
     }
   }, [formData, isLoggedIn]);
 
-  // useEffect(() => {
-  //   if (isLoggedIn) {
-  //     localStorage.setItem("formData", JSON.stringify(formData));
-  //   }
-  // }, [formData, isLoggedIn]);
-
   const handleInput = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -150,6 +146,7 @@ function Form() {
   };
 
   const handlePostForm = async () => {
+    setLoading(true);
     console.log("masuk tak?", formData);
     const dataToSend = dataStudent(formData);
 
@@ -190,6 +187,7 @@ function Form() {
       }
     } else {
       alert("Data belum lengkap");
+      setLoading(false);
     }
   };
   const FormTitles = [
@@ -274,7 +272,7 @@ function Form() {
         <div className="box ">
           <div className="container">
             <div className="body mb-2">{PageDisplay()}</div>
-            <div className="footer d-grid gap-2 d-md-flex justify-content-md-end">
+            <div className="footer d-grid gap-2 d-md-flex justify-content-md-end mb-4">
               <button
                 className="btn btn-primary me-2"
                 type="button"
@@ -294,8 +292,31 @@ function Form() {
                   }
                 }}
               >
-                {page === FormTitles.length - 1 ? "Kirim" : "Selanjutnya"}
+                {loading ? (
+                  <div className="d-flex align-items-center">
+                    <Spinner /> {/* Komponen Spinner */}
+                    <span className="ms-2 text-center">Loading...</span>
+                  </div>
+                ) : page === FormTitles.length - 1 ? (
+                  "Kirim"
+                ) : (
+                  "Selanjutnya"
+                )}
               </button>
+
+              {/* <button
+                className="btn btn-primary"
+                type="button"
+                onClick={() => {
+                  if (page === FormTitles.length - 1) {
+                    handlePostForm(formData);
+                  } else {
+                    setPage((currPage) => currPage + 1);
+                  }
+                }}
+              >
+                {page === FormTitles.length - 1 ? "Kirim" : "Selanjutnya"}
+              </button> */}
             </div>
           </div>
         </div>
