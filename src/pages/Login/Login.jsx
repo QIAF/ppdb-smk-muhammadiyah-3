@@ -8,7 +8,7 @@ import axios from "axios";
 import Register from "./Register";
 import Cookies from "js-cookie";
 import { Button } from "../../components/Ui/Button/Button";
-import { loginData, validateLogin } from "../../Utils/validation";
+import { loginData } from "../../Utils/validation";
 
 export const Login = ({ title, props }) => {
   const { id } = useParams();
@@ -179,7 +179,7 @@ export const Login = ({ title, props }) => {
                 <ErrMsg msg={error.password} />
               </div>
               <div className="modal-footer">
-                <div className="=gap-2 col-6 mx-auto">
+                <div className="= d-grid gap-2 col-6 mx-auto">
                   <Button
                     className="btn btn-primary"
                     type="submit"
