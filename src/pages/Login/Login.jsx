@@ -9,6 +9,7 @@ import Register from "./Register";
 import Cookies from "js-cookie";
 import { Button } from "../../components/Ui/Button/Button";
 import { loginData } from "../../Utils/validation";
+import Spinner from "../../components/Spinner/Spinner";
 
 export const Login = ({ title, props }) => {
   const { id } = useParams();
@@ -17,6 +18,7 @@ export const Login = ({ title, props }) => {
   const [error, setError] = useState({});
   const [modalLoginOpen, setModalLoginOpen] = useState(true);
   const navigate = useNavigate();
+  const [loading, setLoading] = useState();
 
   const handleRegisterModal = () => {
     setModalLoginOpen(false);
@@ -43,6 +45,7 @@ export const Login = ({ title, props }) => {
   };
 
   const handlePostForm = async (data) => {
+    setLoading(true);
     const formLogin = loginData(data);
     console.log(formLogin);
 
@@ -101,6 +104,7 @@ export const Login = ({ title, props }) => {
         toast.error("Terjadi kesalahan saat login", { delay: 800 });
       }
     } catch (error) {
+      setLoading(false);
       if (error.response) {
         console.error("Error response:", error.response);
         toast.error("Email atau password tidak valid", { delay: 800 });
@@ -185,14 +189,29 @@ export const Login = ({ title, props }) => {
                     type="submit"
                     onClick={() => handlePostForm(form)}
                   >
-                    Login
+                    {loading ? (
+                      <div className="d-flex align-items-center">
+                        <Spinner /> {/* Komponen Spinner */}
+                        <span className="ms-2 text-center">Loading...</span>
+                      </div>
+                    ) : (
+                      "Login"
+                    )}
                   </Button>
                   <button
                     className="btn btn-primary"
                     type="button"
                     onClick={handleRegisterModal}
+                    error={error}
                   >
-                    Register
+                    {loading ? (
+                      <div className="d-flex align-items-center">
+                        <Spinner /> {/* Komponen Spinner */}
+                        <span className="ms-2 text-center">Loading...</span>
+                      </div>
+                    ) : (
+                      "Register"
+                    )}
                   </button>
                 </div>
               </div>

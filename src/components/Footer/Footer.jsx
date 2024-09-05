@@ -14,7 +14,12 @@ function Footer() {
             <div className="col-md-6">
               <div className="row d-flex justify-space-between align-items-center ">
                 <div className="col-3">
-                  <img src={ImgLogo} alt="" className="img-logo-smk d-flex" />
+                  <img
+                    src={ImgLogo}
+                    alt=""
+                    className="img-logo-smk d-flex"
+                    style={{ maxWidth: "20rem", width: "100%" }}
+                  />
                 </div>
               </div>
               <div className="col ">

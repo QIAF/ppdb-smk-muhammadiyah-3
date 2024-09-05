@@ -14,7 +14,7 @@ function Heroes() {
   return (
     <div className="heroes-lp">
       <div className="container">
-        <div className="row flex-lg-row-reverse align-items-center g-5">
+        <div className="row flex-lg-row-reverse align-items-center">
           <div className="col-10 col-sm-8 col-lg-6">
             <img
               src={ImgSiswa}
