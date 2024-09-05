@@ -93,9 +93,8 @@
 
      .print-container {
          padding: 0;
-         /* Menghapus padding jika margin sudah diatur di @page */
          box-sizing: border-box;
-         /* Termasuk margin dalam ukuran elemen */
+
          width: 100%;
 
          margin-bottom: 0;

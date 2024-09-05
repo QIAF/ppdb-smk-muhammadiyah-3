@@ -273,10 +273,10 @@ function Form() {
       <Box>
         <div className="box ">
           <div className="container">
-            <div className="body">{PageDisplay()}</div>
-            <div className="footer  gap-3 d-md-flex justify-content-md-end mb-3">
+            <div className="body mb-2">{PageDisplay()}</div>
+            <div className="footer d-grid gap-2 d-md-flex justify-content-md-end">
               <button
-                className="btn btn-primary me-md-2"
+                className="btn btn-primary me-2"
                 type="button"
                 disabled={page === 0}
                 onClick={() => setPage((currPage) => currPage - 1)}
