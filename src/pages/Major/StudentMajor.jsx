@@ -2,8 +2,8 @@ import React from "react";
 import NavbarMajor from "../../components/Navbar/NavbarMajor";
 import Hero from "../../components/Hero/Hero";
 import Card from "../../components/Card";
-import Footer from "../../components/Footer/Footer";
 import ImgStudent2 from "../../assets/images/img-student2.png";
+import FooterWhite from "../../components/Footer/FooterWhite";
 
 function StudentMajor() {
   return (
@@ -11,7 +11,7 @@ function StudentMajor() {
       <NavbarMajor />
       <Hero title={"Bidang Keahlian"} img={ImgStudent2} />
       <Card />
-      <Footer />
+      <FooterWhite />
     </>
   );
 }
