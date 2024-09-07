@@ -10,7 +10,7 @@ const Hero = (props) => {
   return (
     <div className="heroes-Major">
       <div className="container col-xxl-8 px-4 py-2">
-        <div className="row flex-lg-row-reverse align-items-center g-5 py-1">
+        <div className="row flex-lg-row-reverse align-items-center  py-1">
           <div className="col-lg-6">
             <h1 className="title-heroes-major display-5 fw-bold lh-1 mb-5 text-center">
               {title}
