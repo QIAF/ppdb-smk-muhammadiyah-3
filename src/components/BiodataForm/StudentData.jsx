@@ -167,7 +167,7 @@ function StudentData({ formData, handleInput, error, handleChange }) {
                 </div>
                 <div className="row mb-3">
                   <label
-                    htmlFor="student_distance"
+                    htmlFor="student_address"
                     className="col col-form-label"
                   >
                     Alamat di Yogyakarta
@@ -203,7 +203,7 @@ function StudentData({ formData, handleInput, error, handleChange }) {
                       aria-label="Default select example"
                       id="student_distance"
                       name="student_distance"
-                      value={!formData.student_distance}
+                      value={formData.student_distance}
                       onChange={handleInput}
                     >
                       <option value="">Pilih salah satu</option>{" "}
