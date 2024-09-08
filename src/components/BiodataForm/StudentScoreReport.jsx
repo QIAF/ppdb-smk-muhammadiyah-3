@@ -11,7 +11,7 @@ function StudentScoreReport({ handleInput, formData, error }) {
           <div className="center">
             <div className="header">
               <h5 style={{ color: "#816503" }}>
-                Masukkan nilai raport Sster 1-5
+                Masukkan nilai raport Semester 1-5
               </h5>
             </div>
             <br />
