@@ -184,10 +184,11 @@ function Form() {
           "Terjadi kesalahan:",
           error.response ? error.response.data : error.message
         );
+      } finally {
+        setLoading(false); // Hide spinner
       }
     } else {
       alert("Data belum lengkap");
-      setLoading(false);
     }
   };
   const FormTitles = [
@@ -256,7 +257,6 @@ function Form() {
         );
     }
   };
-
   return (
     <>
       <div
@@ -267,7 +267,6 @@ function Form() {
       >
         <Step currentStep={page + 1} />
       </div>
-
       <Box>
         <div className="box ">
           <div className="container">
@@ -294,7 +293,7 @@ function Form() {
               >
                 {loading ? (
                   <div className="d-flex align-items-center">
-                    <Spinner /> {/* Komponen Spinner */}
+                    <Spinner />
                     <span className="ms-2 text-center">Loading...</span>
                   </div>
                 ) : page === FormTitles.length - 1 ? (
@@ -303,20 +302,6 @@ function Form() {
                   "Selanjutnya"
                 )}
               </button>
-
-              {/* <button
-                className="btn btn-primary"
-                type="button"
-                onClick={() => {
-                  if (page === FormTitles.length - 1) {
-                    handlePostForm(formData);
-                  } else {
-                    setPage((currPage) => currPage + 1);
-                  }
-                }}
-              >
-                {page === FormTitles.length - 1 ? "Kirim" : "Selanjutnya"}
-              </button> */}
             </div>
           </div>
         </div>
