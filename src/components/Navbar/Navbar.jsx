@@ -11,6 +11,15 @@ function Navbar() {
     navigate(route);
   }
 
+  const handleOpenLoginModal = () => {
+    setmodalLogin(true);
+  };
+
+  // Fungsi untuk menutup modal login
+  const handleCloseLoginModal = () => {
+    setmodalLogin(false);
+  };
+
   const location = useLocation();
   const hash = location.hash;
   return (
@@ -55,10 +64,15 @@ function Navbar() {
               <a href="#alur-daftar">Alur Pendaftaran</a>
             </li>
             <li>
-              <a onClick={() => setmodalLogin(true)}>Pendaftaran</a>
+              <a onClick={handleOpenLoginModal}>Pendaftaran</a>
             </li>
           </ul>
-          {modalLogin && <Login title={"Sebelum lanjut, login dulu yuk !"} />}
+          {modalLogin && (
+            <Login
+              title={"Sebelum lanjut, login dulu yuk !"}
+              onClose={handleCloseLoginModal}
+            />
+          )}
         </div>
       </div>
     </nav>

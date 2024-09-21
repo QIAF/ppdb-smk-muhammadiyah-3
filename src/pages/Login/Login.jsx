@@ -8,10 +8,10 @@ import axios from "axios";
 import Register from "./Register";
 import Cookies from "js-cookie";
 import { Button } from "../../components/Ui/Button/Button";
-import { loginData } from "../../Utils/validation";
+import { loginData, validateLogin } from "../../Utils/validation";
 import Spinner from "../../components/Spinner/Spinner";
 
-export const Login = ({ title, props }) => {
+export const Login = ({ title, props, onClose }) => {
   const { id } = useParams();
 
   const [modalRegister, setModalRegister] = useState(false);
@@ -20,12 +20,14 @@ export const Login = ({ title, props }) => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState();
 
-  const handleRegisterModal = () => {
+  const handleRegisterModal = (e) => {
+    e.preventDefault();
     setModalLoginOpen(false);
     setModalRegister(true);
   };
 
-  const handleLoginModal = () => {
+  const handleLoginModal = (e) => {
+    e.preventDefault();
     setModalRegister(false);
     setModalLoginOpen(true);
   };
@@ -153,7 +155,7 @@ export const Login = ({ title, props }) => {
                   className="btn-close"
                   data-bs-dismiss="modal"
                   aria-label="Close"
-                  onClick={() => setModalLoginOpen(false)}
+                  onClick={onClose}
                 ></Button>
               </div>
               <div className="modal-body">

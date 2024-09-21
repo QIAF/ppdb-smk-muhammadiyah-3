@@ -184,11 +184,13 @@ function Form() {
           "Terjadi kesalahan:",
           error.response ? error.response.data : error.message
         );
+        setLoading(false);
       } finally {
         setLoading(false); // Hide spinner
       }
     } else {
       alert("Data belum lengkap");
+      setLoading(false);
     }
   };
   const FormTitles = [
