@@ -1,15 +1,48 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Hero from "../../components/Hero/Hero";
 import Img from "../../assets/images/img-student.png";
 import NavbarGet from "../../components/Navbar/NavbarGet";
 import Box from "../../components/Ui/Box/Box";
 import { Button } from "../../components/Ui/Button/Button";
 import { useNavigate } from "react-router";
+import axios from "axios";
 
-export default function Article(props) {
+export default function Article() {
   const navigate = useNavigate();
   function handleClick(route) {
     navigate(route);
+  }
+  const [data, setData] = useState([]);
+  const [error, setIsError] = useState(false);
+  const [isPending, setIsPending] = useState(true);
+
+  const fetchData = async () => {
+    try {
+      const res = await axios.get(
+        "https://be-ppdb-online-update.vercel.app/api/v1/article"
+      );
+      console.log("API Response:", res.data);
+      if (res.data.data && res.data.data.length > 0) {
+        setData(res.data.data[0]); // Mengambil artikel pertama dari array
+      }
+      setIsPending(false);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      setIsError(true);
+      setIsPending(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  if (isPending) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error fetching data. Please try again later.</div>;
   }
   return (
     <>
@@ -61,42 +94,18 @@ export default function Article(props) {
         </style>
 
         <div className="announcement">
-          <h1>
-            <b>Hai, calon siswa SMK 3 Muhammadiyah Yogyakarta! 😊</b>
-          </h1>
-          <br />
-          <p>
-            Kamu telah menyelesaikan pendaftaran kalian. Sekarang waktunya untuk
-            melangkah ke tahap berikutnya – wawancara!
-          </p>
-          <div className="date">
-            📅 <strong>Jadwal Wawancara:</strong>
-            <br /> Tanggal: Rabu, 05 November 2025
-            <br />
-            Waktu: 08.00 WIB - 12.00 WIB
-            <br />
-            Lokasi: Hall SMK 3 Muhammadiyah Yogyakarta
-          </div>
-          <p>
-            Jangan lupa datang 15 menit lebih awal, periksa kembali apakah data
-            kamu sudah sesuai. Kalau ada yang bingung atau butuh info lebih
-            lanjut, jangan ragu untuk kontak kami ya!
-          </p>
-          <div className="note">
-            Kami gak sabar untuk bertemu dan mengenal kalian lebih dekat.
-            Semangat dan sampai jumpa! 🌟
-          </div>
+          <h1>{/* <b>{data.article_name}</b> */}</h1>
+          {/* Menampilkan deskripsi artikel dengan dangerouslySetInnerHTML */}
+          <p dangerouslySetInnerHTML={{ __html: data.article_description }} />
         </div>
-        <div>
-          <div className="d-flex justify-content-center mt-5">
-            <Button
-              className="btn btn-primary mb-5"
-              type="button"
-              onClick={() => handleClick("/dataSiswa")}
-            >
-              Lihat Data Anda
-            </Button>
-          </div>
+        <div className="d-flex justify-content-center mt-5">
+          <Button
+            className="btn btn-primary mb-5"
+            type="button"
+            onClick={() => handleClick("/dataSiswa")}
+          >
+            Lihat Data Anda
+          </Button>
         </div>
       </Box>
     </>

@@ -36,7 +36,7 @@ function InfoPendaftaran() {
                 <td>
                   <img src={ImgPanah} alt="" />
                 </td>
-                <td>Fotocopy Akte Kelahiran</td>
+                <td>Fotocopy Raport semsester 1-5</td>
                 <td>1 Lembar</td>
               </tr>
               <tr>
@@ -59,14 +59,14 @@ function InfoPendaftaran() {
             <div className="banner-pendaftar row gx-5 gap-2">
               <div className="col">
                 <div className="banner-pendaftar1  p-5">
-                  <h3>Pendaftar saat ini</h3>
-                  <p className="total fw-bold">350</p>
+                  <h3>Jumlah Kelas</h3>
+                  <p className="total fw-bold">13</p>
                 </div>
               </div>
               <div className="col">
                 <div className="banner-pendaftar2 p-5">
                   <h3>Daya Tampung</h3>
-                  <p className="total fw-bold">500</p>
+                  <p className="total fw-bold">468</p>
                 </div>
               </div>
             </div>

@@ -28,9 +28,6 @@ function Register() {
     password: "",
     confirm_password: "",
   });
-
-  console.log("data", form);
-
   const handleInput = (e) => {
     const { name, value } = e.target;
     setForm({

@@ -1,8 +1,13 @@
 import { useState } from "react";
 import ImgAlurOnline from "../assets/images/img-alur-online.png";
 import { Login } from "../pages/Login/Login";
+import { useNavigate } from "react-router";
 function PendaftaranOnline() {
   const [modalLogin, setmodalLogin] = useState(false);
+  const navigate = useNavigate();
+  const handleCloseLoginModal = () => {
+    setmodalLogin(false);
+  };
   return (
     <div className="banner-daftar-online banner-lg p-3 mb-5">
       <div className="container">
@@ -25,7 +30,10 @@ function PendaftaranOnline() {
                 Daftar sekarang
               </button>
               {modalLogin && (
-                <Login title={"Sebelum lanjut, login dulu yuk !"} />
+                <Login
+                  title={"Sebelum lanjut, login dulu yuk !"}
+                  onClose={handleCloseLoginModal}
+                />
               )}
             </div>
           </div>

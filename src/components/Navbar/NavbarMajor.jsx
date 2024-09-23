@@ -51,9 +51,9 @@ function NavbarMajor() {
                 Bidang Keahlian
               </a>
             </li>
-            <li>
+            {/* <li>
               <a onClick={() => setmodalLogin(true)}>Pendaftaran</a>
-            </li>
+            </li> */}
           </ul>
           {modalLogin && <Login title={"Sebelum lanjut, login dulu yuk !"} />}
         </div>

@@ -7,6 +7,9 @@ import { Login } from "../pages/Login/Login";
 function Heroes() {
   const [modalLogin, setmodalLogin] = useState(false);
   const navigate = useNavigate();
+  const handleCloseLoginModal = () => {
+    setmodalLogin(false);
+  };
   const handleClick = (e) => {
     e.preventDefault();
     navigate("/MajorPage");
@@ -42,7 +45,10 @@ function Heroes() {
                   Daftar Sekarang
                 </button>
                 {modalLogin && (
-                  <Login title={"Sebelum lanjut, login dulu yuk !"} />
+                  <Login
+                    title={"Sebelum lanjut, login dulu yuk !"}
+                    onClose={handleCloseLoginModal}
+                  />
                 )}
               </div>
             </div>

@@ -17,7 +17,6 @@ function LandingPage() {
     <>
       <Navbar />
       <Heroes />
-
       <ChatIcon />
       <Sekilas />
       <Testimonial />
