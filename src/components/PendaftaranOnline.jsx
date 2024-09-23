@@ -39,7 +39,12 @@ function PendaftaranOnline() {
           </div>
           <div className="col">
             <div className="img-persyaratan-online">
-              <img src={ImgAlurOnline} alt="" className="img-tutor-online " />
+              <img
+                src={ImgAlurOnline}
+                alt=""
+                className="img-tutor-online"
+                style={{ maxWidth: "100%", height: "auto" }}
+              />
             </div>
           </div>
         </div>

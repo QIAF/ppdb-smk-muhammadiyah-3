@@ -6,6 +6,7 @@ import Box from "../../components/Ui/Box/Box";
 import { Button } from "../../components/Ui/Button/Button";
 import { useNavigate } from "react-router";
 import axios from "axios";
+import FooterWhite from "../../components/Footer/FooterWhite";
 
 export default function Article() {
   const navigate = useNavigate();
@@ -47,11 +48,9 @@ export default function Article() {
   return (
     <>
       <NavbarGet />
-
       <Hero title="Pengumuman" img={Img}></Hero>
-      <Box>
-        <style>
-          {`
+      <style>
+        {`
             .announcement {
               background-color: #ffffff;
               border: 1px solid #ddd;
@@ -91,8 +90,8 @@ export default function Article() {
               margin-top: 20px;
             }
           `}
-        </style>
-
+      </style>
+      <div className="container">
         <div className="announcement">
           <h1>{/* <b>{data.article_name}</b> */}</h1>
           {/* Menampilkan deskripsi artikel dengan dangerouslySetInnerHTML */}
@@ -107,7 +106,8 @@ export default function Article() {
             Lihat Data Anda
           </Button>
         </div>
-      </Box>
+      </div>
+      <FooterWhite />
     </>
   );
 }
