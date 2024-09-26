@@ -51,11 +51,12 @@ function StudentFileData({ error, setFormData, formData }) {
                     )}
                   </b>
                   <br /> <br />
-                  1.Scan/foto Kartu Keluarga <br />
+                  1. Scan/foto Kartu Keluarga <br />
                   2. Scan/foto Akta Kelahiran <br />
                   3. Sertifikat Prestasi <br />
                   4. Surat Keterangan Lulus <br />
                   5. Ijazah SMP <br />
+                  6. Bukti pembayaran melalui BRI. 837297319732, AN. Nini <br />
                   <br />
                   <small>Contoh format nama file: Nama_Lengkap_Siswa.pdf</small>
                   <br />
