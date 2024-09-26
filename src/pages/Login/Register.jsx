@@ -10,7 +10,7 @@ import { ErrMsg } from "../../components/Error/ErrMsg";
 import axios from "axios";
 import Spinner from "../../components/Spinner/Spinner";
 
-function Register() {
+function Register({ onClose }) {
   const [error, setError] = useState({});
   const [modalRegisterOpen, setModalRegister] = useState(true);
   const [modalLoginOpen, setModalLoginOpen] = useState(false);
@@ -41,6 +41,7 @@ function Register() {
     setLoading(true);
     const isValid = validateRegister(form, setError);
     if (!isValid) {
+      setLoading(false);
       // Jika tidak valid, tampilkan pesan kesalahan dan berhenti
       toast.error("Harap perbaiki kesalahan di data sebelum melanjutkan.", {
         delay: 800,
@@ -62,13 +63,13 @@ function Register() {
         toast.error("Terjadi kesalahan saat login", { delay: 800 });
       }
     } catch (error) {
-      setLoading(false);
       toast.error(
         "Harap masukkan data dengan benar, kemudian coba registrasi ulang.",
         {
           delay: 800,
         }
       );
+      setLoading(false);
     }
   };
 
@@ -97,7 +98,7 @@ function Register() {
                   className="btn-close"
                   data-bs-dismiss="modal"
                   aria-label="Close"
-                  onClick={() => setModalRegister(false)}
+                  onClick={onClose}
                 ></button>
               </div>
               <div className="modal-body">
