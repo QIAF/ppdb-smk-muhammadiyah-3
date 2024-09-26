@@ -25,16 +25,12 @@ function PendaftaranOnline() {
               <button
                 type="button"
                 className="btn-daftar btn-lg px-4 me-md-2"
-                onClick={() => setmodalLogin(true)}
+                onClick={() =>
+                  window.open("https://wa.me/6281234567890", "_blank")
+                }
               >
-                Daftar sekarang
+                Konsultasi
               </button>
-              {modalLogin && (
-                <Login
-                  title={"Sebelum lanjut, login dulu yuk !"}
-                  onClose={handleCloseLoginModal}
-                />
-              )}
             </div>
           </div>
           <div className="col">
