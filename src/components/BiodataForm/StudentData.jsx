@@ -192,7 +192,7 @@ function StudentData({ formData, handleInput, error, handleChange }) {
                     htmlFor="student_distance"
                     className="col col-form-label"
                   >
-                    Jarak dari rumah ke SMK 3 Muhammadiyah Yogyakarta
+                    Jarak dari rumah ke SMK Muhammadiyah 3 Yogyakarta
                     {!formData.student_distance && (
                       <span className="required">*</span>
                     )}

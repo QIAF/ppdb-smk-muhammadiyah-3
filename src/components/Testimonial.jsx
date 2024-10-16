@@ -10,7 +10,7 @@ function Testimonial() {
     <section id="testimonial-lp">
       <div className="title-mengapa-lp text-center">
         <h4>
-          <strong>Mengapa SMK 3 Muhammadiyah ?</strong>
+          <strong>Mengapa SMK Muhammadiyah 3 Yogyakarta?</strong>
         </h4>
       </div>
       <Marquee

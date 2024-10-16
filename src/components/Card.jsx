@@ -72,7 +72,7 @@ function Card() {
       </div>
       <div className="text-major">
         <p className="text-center">
-          Bidang keahlian di SMK 3 Muhammadiyah memiliki prestasi dan potensi
+          Bidang keahlian di SMK Muhammadiyah 3 memiliki prestasi dan potensi
           masing-masing, raih prestasimu dan daftarkan segera!
         </p>
       </div>

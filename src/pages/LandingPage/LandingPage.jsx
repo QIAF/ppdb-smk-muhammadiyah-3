@@ -11,6 +11,8 @@ import "./LandingPage.css";
 import ChatBot from "../../components/ChatBot/ChatBot";
 import ChatIcon from "../../components/ChatBot/ChatIcon";
 import FooterWhite from "../../components/Footer/FooterWhite";
+import Announcement from "../Announcement/Announcement";
+import Banner from "../../components/Banner";
 
 function LandingPage() {
   return (
@@ -23,8 +25,8 @@ function LandingPage() {
       <AlurDaftar />
       <PendaftaranOnline />
       <InfoPendaftaran />
+      <Banner />
       <Faq />
-      {/* <Footer /> */}
       <FooterWhite />
     </>
   );

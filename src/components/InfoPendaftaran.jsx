@@ -8,7 +8,7 @@ function InfoPendaftaran() {
             Persyaratan Pendaftaran Siswa Baru
           </h4>
         </div>
-        <div className="list">
+        <div className="list justify-content-center">
           <table id="table-persyaratan">
             <tbody>
               <tr>

@@ -64,6 +64,9 @@ function Navbar() {
               <a href="#alur-daftar">Alur Pendaftaran</a>
             </li>
             <li>
+              <a href="#alur-daftar">Kontak</a>
+            </li>
+            <li>
               <a onClick={handleOpenLoginModal}>Pendaftaran</a>
             </li>
           </ul>

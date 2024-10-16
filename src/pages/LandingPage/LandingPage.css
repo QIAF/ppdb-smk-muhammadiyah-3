@@ -131,7 +131,7 @@ body {
 
 .alur-daftar1 {
     width: 100%;
-    max-width: 500px;
+    max-width: 700px;
     height: auto;
 }
 
@@ -157,18 +157,40 @@ body {
     float: right;
     justify-content: center;
 }
-
+/* 
 .persyaratan-pandaftaran {
     margin-top: 100px;
     font-family: 'Commissioner', sans-serif;
-}
+} */
 
 #table-persyaratan {
-    border-collapse: separate;
-    border-spacing: 40px 10px;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    /* Untuk memusatkan tabel */
+    text-align: left;
+    /* Mengatur text agar rata kiri */
+    padding: 10px;
+}
+
+.info-daftar-siswa {
+    padding: 20px;
+}
+
+.persyaratan-pandaftaran {
+    margin-bottom: 20px;
+}
+
+.persyaratan-pandaftaran .title-persyaratan {
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+#table-persyaratan td {
+    padding: 10px;
+    /* Memberikan ruang (spasi) antar field di dalam tabel */
+}
+
+#table-persyaratan tr {
+    border-bottom: 1px solid #ccc;
+    /* Menambahkan garis bawah pada setiap baris */
 }
 
 /* bagian informasi pendaftaran lp */

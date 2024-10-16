@@ -29,7 +29,7 @@ function Faq() {
               >
                 <div className="accordion-body">
                   Ya, siswa dari luar Yogyakarta tetap memiliki kesempatan untuk
-                  lolos seleksi di SMK 3 Muhammadiyah Yogyakarta. Kesempatan
+                  lolos seleksi di SMK Muhammadiyah 3 Yogyakarta. Kesempatan
                   untuk diterima biasanya tidak terbatas pada asal daerah siswa,
                   tetapi lebih bergantung pada kualifikasi, prestasi akademik,
                   kemampuan, dan kesiapan siswa dalam mengikuti seleksi.
@@ -38,7 +38,7 @@ function Faq() {
                   sekolah juga akan menjadi pertimbangan dalam penerimaan siswa.
                   Oleh karena itu, siswa dari luar Yogyakarta yang memenuhi
                   kriteria dan memiliki motivasi yang kuat tetap memiliki
-                  peluang untuk diterima di SMK 3 Muhammadiyah Yogyakarta.
+                  peluang untuk diterima di Muhammadiyah Yogyakarta.
                 </div>
               </div>
             </div>
@@ -52,7 +52,7 @@ function Faq() {
                   aria-expanded="false"
                   aria-controls="flush-collapseTwo"
                 >
-                  Apakah SMK 3 Muhammadiyah memiliki Sosial media seperti
+                  Apakah SMK Muhammadiyah 3 memiliki Sosial media seperti
                   Youtube, Facebook dan sejenisnya ?
                 </button>
               </h2>
@@ -81,7 +81,7 @@ function Faq() {
                   aria-expanded="false"
                   aria-controls="flush-collapseThree"
                 >
-                  Apakah SMK 3 Muhammadiyah memiliki Beasiswa bagi siswa yang
+                  Apakah SMK Muhammadiyah 3 memiliki Beasiswa bagi siswa yang
                   berprestasi ?
                 </button>
               </h2>
@@ -91,13 +91,13 @@ function Faq() {
                 data-bs-parent="#accordionFlushExample"
               >
                 <div className="accordion-body">
-                  Ya, SMK 3 Muhammadiyah Yogyakarta menyediakan beasiswa bagi
-                  siswa yang berprestasi. Sekolah ini berkomitmen untuk
-                  mendukung siswa yang memiliki potensi akademik tinggi dan
-                  kemampuan khusus melalui berbagai program beasiswa. Selain
-                  itu, siswa yang memiliki prestasi di bidang akademik atau
-                  non-akademik berpeluang untuk mendapatkan beasiswa guna
-                  meringankan biaya pendidikan mereka​
+                  Ya, Muhammadiyah Yogyakarta menyediakan beasiswa bagi siswa
+                  yang berprestasi. Sekolah ini berkomitmen untuk mendukung
+                  siswa yang memiliki potensi akademik tinggi dan kemampuan
+                  khusus melalui berbagai program beasiswa. Selain itu, siswa
+                  yang memiliki prestasi di bidang akademik atau non-akademik
+                  berpeluang untuk mendapatkan beasiswa guna meringankan biaya
+                  pendidikan mereka​
                 </div>
               </div>
             </div>

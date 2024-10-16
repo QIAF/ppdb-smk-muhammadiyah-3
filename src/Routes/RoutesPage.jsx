@@ -8,7 +8,7 @@ import StudentMajor from "../pages/Major/StudentMajor";
 import UpdateBiodata from "../pages/Biodata/UpdateBiodata";
 import DetailData from "../components/BiodataForm/DetailData";
 import Article from "../pages/Article/Article";
-import Step from "../components/Step/Step";
+import Announcement from "../pages/Announcement/Announcement";
 
 export const RoutesPage = () => {
   return (
@@ -16,6 +16,7 @@ export const RoutesPage = () => {
       {/* <Step /> */}
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/pengumuman" element={<Announcement />} />
         <Route element={<PrivateRoute />}>
           <Route path="/login" element={<Login />} />
           <Route path="/formData" element={<BiodataPage />} />

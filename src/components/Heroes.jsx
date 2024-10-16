@@ -10,10 +10,9 @@ function Heroes() {
   const handleCloseLoginModal = () => {
     setmodalLogin(false);
   };
-  const handleClick = (e) => {
-    e.preventDefault();
-    navigate("/MajorPage");
-  };
+  function handleClick(route) {
+    navigate(route);
+  }
   return (
     <div className="heroes-lp">
       <div className="container">
@@ -31,7 +30,7 @@ function Heroes() {
           <div className="col-lg-6">
             <div className="title-heroes">
               <h1 className="display-5 fw-semibold">PPDB</h1>
-              <h1>SMK 3 MUHAMMADIYAH YOGYAKARTA</h1>
+              <h1>SMK MUHAMMADIYAH 3 YOGYAKARTA</h1>
               <br />
               <p className="lead">
                 Daftarkan diri anda ke bidang keahlian impianmu, ciptakan skill
@@ -39,17 +38,17 @@ function Heroes() {
               </p>
               <div className="d-grid gap-2 d-md-flex justify-content-md-start">
                 <button
-                  onClick={() => setmodalLogin(true)}
+                  onClick={() => handleClick("/pengumuman")}
                   className="btn-daftar"
                 >
-                  Daftar Sekarang
+                  Lihat Informasi
                 </button>
-                {modalLogin && (
+                {/* {modalLogin && (
                   <Login
                     title={"Sebelum lanjut, login dulu yuk !"}
                     onClose={handleCloseLoginModal}
                   />
-                )}
+                )} */}
               </div>
             </div>
           </div>

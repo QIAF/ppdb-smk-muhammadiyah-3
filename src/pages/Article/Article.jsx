@@ -7,44 +7,14 @@ import { Button } from "../../components/Ui/Button/Button";
 import { useNavigate } from "react-router";
 import axios from "axios";
 import FooterWhite from "../../components/Footer/FooterWhite";
+import { Link } from "react-router-dom";
 
 export default function Article() {
   const navigate = useNavigate();
   function handleClick(route) {
     navigate(route);
   }
-  const [data, setData] = useState([]);
-  const [error, setIsError] = useState(false);
-  const [isPending, setIsPending] = useState(true);
 
-  const fetchData = async () => {
-    try {
-      const res = await axios.get(
-        "https://be-ppdb-online-update.vercel.app/api/v1/article"
-      );
-      console.log("API Response:", res.data);
-      if (res.data.data && res.data.data.length > 0) {
-        setData(res.data.data[0]); // Mengambil artikel pertama dari array
-      }
-      setIsPending(false);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-      setIsError(true);
-      setIsPending(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  if (isPending) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>Error fetching data. Please try again later.</div>;
-  }
   return (
     <>
       <NavbarGet />
@@ -92,10 +62,28 @@ export default function Article() {
           `}
       </style>
       <div className="container">
-        <div className="announcement">
-          <h1>{/* <b>{data.article_name}</b> */}</h1>
-          {/* Menampilkan deskripsi artikel dengan dangerouslySetInnerHTML */}
-          <p dangerouslySetInnerHTML={{ __html: data.article_description }} />
+        <div className="announcement ">
+          <h1>Halo calon siswa SMK Muhammadiyah 3 Yogyakarta! 👋</h1>
+          <p>
+            Kamu telah melakukan tahap pendaftaran! <br />
+          </p>
+          <p>
+            Informasi penting terkait PPDB tersedia. Cek detailnya di fitur{" "}
+            <Link to="/pengumuman" className="text-primary font-weight-bold">
+              Informasi
+            </Link>{" "}
+            pada website kami. Jangan lewatkan kesempatan untuk mengetahui
+            jadwal wawancara dan hasil seleksi kalian!
+          </p>
+          <p>
+            Jika ada pertanyaan lebih lanjut, bisa langsung hubungi kami di
+            nomor <strong>0812-3456-7890</strong>.
+          </p>
+          <div>
+            Salam hangat,
+            <br />
+            Tim PPDB SMK 3 Muhammadiyah Yogyakarta
+          </div>
         </div>
         <div className="d-flex justify-content-center mt-5">
           <Button
